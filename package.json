@@ -16,7 +16,7 @@
     "hubot-irc": "^0.2.8",
     "hubot-redis-brain": "0.0.3",
     "hubot-scripts": "^2.16.2",
-    "hubot-welcome": ">= 0.0.2"
+    "hubot-welcome": "0.0.3"
   },
   "engines": {
     "node": "0.10.x"
