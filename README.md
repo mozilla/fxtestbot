@@ -49,6 +49,8 @@ Current value: `webqabot`
 Current value: `#mozwebqa`
 * HUBOT_IRC_SERVER - The IRC server to which you want the bot to connect. 
 Current value: `irc.mozilla.org`
+* HUBOT_WELCOME_MESSAGE - The message to use to greet new people who join the channel.
+Current value: `Hey {nick}, welcome to our channel! If you want to know more about our team, visit https://quality.mozilla.org/teams/web-qa/`
 
 You will also need to add a Redis add-on, such as [Heroku Redis][heroku-redis]
 
