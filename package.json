@@ -1,0 +1,19 @@
+{
+  "name": "webqabot",
+  "version": "0.0.1",
+  "private": true,
+  "author": "Mozilla Web QA <mozwebqa@mozilla.org>",
+  "description": "IRC bot to help out in #mozwebqa on irc.mozilla.org",
+  "dependencies": {
+    "hubot": "^2.16.0",
+    "hubot-diagnostics": "0.0.1",
+    "hubot-help": "^0.1.1",
+    "hubot-heroku-keepalive": "^1.0.0",
+    "hubot-irc": "^0.2.8",
+    "hubot-redis-brain": "0.0.3",
+    "hubot-scripts": "^2.16.2"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
