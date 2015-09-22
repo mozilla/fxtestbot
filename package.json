@@ -6,6 +6,7 @@
   "description": "IRC bot to help out in #mozwebqa on irc.mozilla.org",
   "dependencies": {
     "hubot": "^2.16.0",
+    "hubot-bugzilla": "0.0.1",
     "hubot-diagnostics": "0.0.1",
     "hubot-github-repo-event-notifier2": ">= 0.0.0",
     "hubot-help": "^0.1.1",
