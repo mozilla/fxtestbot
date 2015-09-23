@@ -1,0 +1,24 @@
+{
+  "name": "webqabot",
+  "scripts": {},
+  "env": {
+    "HUBOT_GITHUB_EVENT_NOTIFIER_ROOM": {
+      "required": true
+    },
+    "HUBOT_GITHUB_EVENT_NOTIFIER_TYPES": {
+      "required": true
+    },
+    "HUBOT_IRC_NICK": {
+      "generator": "secret"
+    },
+    "HUBOT_IRC_ROOMS": {
+      "required": true
+    },
+    "HUBOT_IRC_SERVER": {
+      "required": true
+    }
+  },
+  "addons": [
+    "heroku-redis"
+  ]
+}
