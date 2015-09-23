@@ -1,4 +1,5 @@
 [
+  "hubot-bugzilla",
   "hubot-diagnostics",
   "hubot-github-repo-event-notifier2",
   "hubot-help",
