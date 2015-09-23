@@ -2,6 +2,9 @@
   "name": "webqabot",
   "scripts": {},
   "env": {
+    "HUBOT_BUGZILLA_URL": {
+      "required": true
+    },
     "HUBOT_GITHUB_EVENT_NOTIFIER_ROOM": {
       "required": true
     },
