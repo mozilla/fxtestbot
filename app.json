@@ -9,7 +9,7 @@
       "required": true
     },
     "HUBOT_IRC_NICK": {
-      "generator": "secret"
+      "value": "webqabot-review-app"
     },
     "HUBOT_IRC_ROOMS": {
       "required": true
@@ -19,6 +19,7 @@
     }
   },
   "addons": [
-    "heroku-redis"
+    "heroku-redis",
+    "papertrail"
   ]
 }
