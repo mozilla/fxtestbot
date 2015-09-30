@@ -1,5 +1,6 @@
 [
   "hubot-bugzilla",
+  "hubot-cron",
   "hubot-diagnostics",
   "hubot-github-repo-event-notifier2",
   "hubot-help",
