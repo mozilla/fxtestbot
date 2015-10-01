@@ -4,12 +4,9 @@
 
 module.exports = (robot) ->
 
-  meeting = (res, howSoon) ->
-    if howSoon.length
-      meetingTime = howSoon
-    else
-      meetingTime = " at 9AM Pacific every Thursday"
-    res.send "Come join us#{meetingTime} for our team meeting!"
+  meeting = (res, time) ->
+    time = if time != "" then time else "at 9am Pacific every Thursday"
+    res.send "Come join us #{time} for our team meeting!"
     res.send "Meeting notes are available at https://wiki.mozilla.org/QA/Execution/Web_Testing#Meeting_Notes"
     vidyo res
 
@@ -20,7 +17,7 @@ module.exports = (robot) ->
     res.send "For information on Vidyo: https://wiki.mozilla.org/Vidyo"
 
   # announce or provide details of our team meeting
-  robot.respond /meeting(\s+(.*)|)/i, (res) ->
+  robot.respond /meeting\s*\b(.*)/i, (res) ->
     meeting res, res.match[1]
 
   # provide details of our team mission
