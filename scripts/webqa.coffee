@@ -18,6 +18,12 @@ module.exports = (robot) ->
     robot.messageRoom room, "Joining by phone: https://wiki.mozilla.org/Teleconferencing#Dialing_In"
     robot.messageRoom room, "For information on Vidyo: https://wiki.mozilla.org/Vidyo"
 
+  # provide details about our mailing list
+  robot.respond /list/i, (res) ->
+    res.send "Email: mozwebqa@mozilla.org"
+    res.send "Subscribe: https://mail.mozilla.org/listinfo/mozwebqa/"
+    res.send "Archive: https://mail.mozilla.org/private/mozwebqa/"
+
   # announce or provide details of our team meeting
   robot.respond /meeting\s*\b(.*)/i, (res) ->
     meeting res.match[1]
@@ -26,6 +32,10 @@ module.exports = (robot) ->
   robot.respond /mission/i, (res) ->
     res.send "Our mission is to provide data, services and tools to positively impact the quality of Mozilla websites. " +
       "https://wiki.mozilla.org/QA/Execution/Web_Testing/Mission"
+
+  # provide details about webqabot's source code
+  robot.respond /source/i, (res) ->
+    res.send "My details and code live at https://github.com/mozilla/webqabot/"
 
   # provide a link to team info
   robot.respond /team/i, (res) ->
