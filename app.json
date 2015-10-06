@@ -6,7 +6,7 @@
       "required": true
     },
     "HUBOT_GITHUB_EVENT_NOTIFIER_ROOM": {
-      "required": true
+      "value": "#webqa-test"
     },
     "HUBOT_GITHUB_EVENT_NOTIFIER_TYPES": {
       "required": true
@@ -15,10 +15,16 @@
       "value": "webqabot-review-app"
     },
     "HUBOT_IRC_ROOMS": {
-      "required": true
+      "value": "#webqa-test"
     },
     "HUBOT_IRC_SERVER": {
       "required": true
+    },
+    "HUBOT_LOG_LEVEL": {
+      "value": "debug"
+    },
+    "HUBOT_WELCOME_MESSAGE": {
+      "value": "Hey {nick}, welcome to this review app channel!"
     }
   },
   "addons": [
