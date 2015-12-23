@@ -2,10 +2,13 @@
 #   Sets up cron jobs for webqabot.
 #
 
+PropertiesReader = require 'properties-reader'
+properties = PropertiesReader('resources/responses.properties')
+
 module.exports = (robot) ->
 
   announceMeeting = () ->
-    robot.emit "announceMeeting", "in 15 minutes"
+    robot.emit "announceMeeting", properties.get("cronTime")
 
   tz = "America/Los_Angeles"
   cronJob = require("cron").CronJob

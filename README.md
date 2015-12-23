@@ -1,6 +1,7 @@
 # webqabot
 
 [![license](https://img.shields.io/badge/license-MPL%202.0-blue.svg)](https://github.com/mozilla/webqabot/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/mozilla/webqabot.svg?branch=master)](https://travis-ci.org/mozilla/webqabot)
 
 webqabot is a chat bot built on the [Hubot][hubot] framework for use in the [#mozwebqa IRC channel][mozwebqa].
 
@@ -31,6 +32,14 @@ Then you can interact with webqabot by typing `webqabot help`.
     webqabot help - Displays all of the help commands that webqabot knows about.
     webqabot ping - Reply with pong
     ...
+
+
+## Testing webqabot
+
+The unit tests can be run via the command line with the command:
+```
+npm test
+```
 
 ## Deploying to Heroku
 
@@ -71,6 +80,10 @@ want to make any changes or add any features, that is the best place to start.
 You may also want to check out the [Hubot Scripting Guide][scripting-docs].
 
 [scripting-docs]: https://hubot.github.com/docs/scripting/
+
+The responses the bot uses are located in the [`resources/responses.properties`](resources/responses.properties) file. 
+
+Unit tests for the bot are located in the [`tests/test_webqa.coffee`](tests/test_webqa.coffee) file.  The ```context 'hubot responding to events'``` is where you add tests that test if the bot responds to [events](https://hubot.github.com/docs/scripting/#events) created by another script (such as [`cron-jobs.coffee`](scripts/cron-jobs.coffee)).  The ```context 'hubot responding to user messages'``` is where you add tests that test if the bot responds to messages sent by a user.  If your test does not fall under those two categories then please create a new context and add your test there.
 
 ### external-scripts
 
