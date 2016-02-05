@@ -25,7 +25,10 @@
     },
     "HUBOT_WELCOME_MESSAGE": {
       "value": "Hey {nick}, welcome to this review app channel!"
-    }
+    },
+    "HUBOT_SEEN_TIMEAGO": {
+      "value": "true"
+    }    
   },
   "addons": [
     "heroku-redis",
