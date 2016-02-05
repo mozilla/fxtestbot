@@ -15,6 +15,7 @@
     "hubot-irc": "^0.2.8",
     "hubot-redis-brain": "0.0.3",
     "hubot-scripts": "^2.16.2",
+    "hubot-seen": "^0.2.3",
     "hubot-welcome": "0.0.3",
     "moment": "^2.11.1",
     "properties-reader": "^0.0.15"
