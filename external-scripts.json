@@ -3,6 +3,7 @@
   "hubot-diagnostics",
   "hubot-github-repo-event-notifier2",
   "hubot-help",
+  "hubot-lmgtfy",
   "hubot-redis-brain",
   "hubot-welcome",
   "hubot-seen"
