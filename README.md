@@ -92,7 +92,7 @@ including this in webqabot's internal scripts, you can either create your own
 external script, or use one that someone else has already created.
 
 Hubot is able to load plugins from third-party `npm` packages. You can get a list of
-available hubot plugins on [npmjs.com](npmjs) or by using `npm search`:
+available hubot plugins on [npmjs](https://www.npmjs.com/) or by using `npm search`:
 
     % npm search hubot-scripts panda
     NAME             DESCRIPTION                        AUTHOR DATE       VERSION KEYWORDS
