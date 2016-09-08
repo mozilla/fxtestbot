@@ -6,16 +6,16 @@
       "required": true
     },
     "HUBOT_GITHUB_EVENT_NOTIFIER_ROOM": {
-      "value": "#webqa-test"
+      "value": "#fx-test-test"
     },
     "HUBOT_GITHUB_EVENT_NOTIFIER_TYPES": {
       "required": true
     },
     "HUBOT_IRC_NICK": {
-      "value": "webqabot-review-app"
+      "value": "fxtestbot-review-app"
     },
     "HUBOT_IRC_ROOMS": {
-      "value": "#webqa-test"
+      "value": "#fx-test-test"
     },
     "HUBOT_IRC_SERVER": {
       "required": true
@@ -28,7 +28,7 @@
     },
     "HUBOT_SEEN_TIMEAGO": {
       "value": "true"
-    }    
+    }
   },
   "addons": [
     "heroku-redis",

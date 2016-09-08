@@ -1,9 +1,9 @@
 {
-  "name": "webqabot",
-  "version": "0.0.1",
+  "name": "fxtestbot",
+  "version": "1.0.0",
   "private": true,
-  "author": "Mozilla Web QA <mozwebqa@mozilla.org>",
-  "description": "IRC bot to help out in #mozwebqa on irc.mozilla.org",
+  "author": "Firefox Test Engineering <firefox-test-engineering@mozilla.com>",
+  "description": "IRC bot to help out in #fx-test on irc.mozilla.org",
   "dependencies": {
     "cron": "^1.0.9",
     "hubot": "^2.16.0",
