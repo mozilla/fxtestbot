@@ -7,9 +7,10 @@ properties = PropertiesReader('resources/responses.properties')
 
 module.exports = (robot) ->
 
-  announceMeeting = () ->
-    robot.emit "announceMeeting", properties.get("cronTime")
-
-  tz = "America/Los_Angeles"
   cronJob = require("cron").CronJob
-  new cronJob("45 8 * * 4", announceMeeting, null, true, tz)
+
+  event = () ->
+    if new Date().getDay() < 7
+      robot.emit 'announceEvent', 'in 15 minutes', 'Automationeers Assemble'
+
+  new cronJob('45 12 * * 3', event, null, true, 'America/Los_Angeles')
