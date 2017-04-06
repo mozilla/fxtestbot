@@ -8,10 +8,9 @@ module.exports = (robot) ->
 
   room = if process.env.HUBOT_IRC_ROOMS then process.env.HUBOT_IRC_ROOMS.split ","[0] else "#fx-test"
 
-  meeting = (time) ->
+  event = (time, name) ->
     currentDate = moment()
-    time = if time != "" then time else properties.get("time1")
-    robot.messageRoom room, util.format(properties.get("time2"), time)
+    robot.messageRoom room, util.format(properties.get("event"), time, name)
     vidyo()
 
   vidyo = () ->
@@ -24,10 +23,6 @@ module.exports = (robot) ->
   robot.respond /list/i, (res) ->
     res.send properties.get("list1")
     res.send properties.get("list2")
-
-  # announce or provide details of our team meeting
-  robot.respond /meeting\s*\b(.*)/i, (res) ->
-    meeting res.match[1]
 
   # provide details of our team mission
   robot.respond /mission/i, (res) ->
@@ -45,5 +40,5 @@ module.exports = (robot) ->
   robot.respond /vidyo/i, (res) ->
     vidyo()
 
-  robot.on "announceMeeting", (time) ->
-    meeting time
+  robot.on "announceEvent", (time, name) ->
+    event time, name

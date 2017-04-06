@@ -7,7 +7,6 @@ PropertiesReader = require 'properties-reader'
 properties = PropertiesReader('resources/responses.properties')
 util = require 'util'
 moment = require 'moment'
-clock = null
 
 describe 'webqa script', ->
   hubotVidyoExpectedResponse = [
@@ -19,34 +18,21 @@ describe 'webqa script', ->
 
   beforeEach ->
     @room = helper.createRoom()
-    clock = sinon.useFakeTimers(moment().valueOf());
 
   afterEach ->
-    clock.restore()
     @room.destroy()
 
   context 'hubot responding to events', ->
-    it 'will respond to the announceMeeting event', ->
-      time =  properties.get("cronTime")
-      clock = sinon.useFakeTimers(moment('2016-01-28').valueOf())
-      @room.robotEvent 'announceMeeting', time
-      expectedMeetingResponse = [
-        ['hubot', util.format(properties.get("time2"), time)]
+    it 'will respond to the announceEvent event', ->
+      time = 'in 15 minutes'
+      @room.robotEvent 'announceEvent', time, 'my event'
+      expectedEventResponse = [
+        ['hubot', util.format(properties.get("event"), time, 'my event')]
       ]
-      expectedMeetingResponse.push hubotVidyoExpectedResponse...
-      expect(@room.messages).to.eql expectedMeetingResponse
+      expectedEventResponse.push hubotVidyoExpectedResponse...
+      expect(@room.messages).to.eql expectedEventResponse
 
   context 'hubot responding to user messages', ->
-    it 'will respond to meeting', ->
-      clock = sinon.useFakeTimers(moment('2016-01-28').valueOf())
-      expectedMeetingResponse = [
-        ['shaggy', 'hubot meeting']
-        ['hubot', util.format(properties.get("time2"), properties.get("time1"))]
-      ]
-      expectedMeetingResponse.push hubotVidyoExpectedResponse...
-      @room.user.say('shaggy', 'hubot meeting').then =>
-        expect(@room.messages).to.eql expectedMeetingResponse
-
     it 'will respond to list', ->
       @room.user.say('scooby', 'hubot list').then =>
         expect(@room.messages).to.eql [
