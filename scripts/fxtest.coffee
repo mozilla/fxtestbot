@@ -1,7 +1,6 @@
 # Description:
 #   fxtestbot's internal behaviour
 util = require 'util'
-moment = require 'moment'
 PropertiesReader = require 'properties-reader'
 properties = PropertiesReader('resources/responses.properties')
 module.exports = (robot) ->
@@ -9,7 +8,6 @@ module.exports = (robot) ->
   room = if process.env.HUBOT_IRC_ROOMS then process.env.HUBOT_IRC_ROOMS.split ","[0] else "#fx-test"
 
   event = (time, name) ->
-    currentDate = moment()
     robot.messageRoom room, util.format(properties.get("event"), time, name)
     vidyo()
 
