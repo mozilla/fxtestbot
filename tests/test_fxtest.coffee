@@ -6,7 +6,6 @@ expect = chai.expect
 PropertiesReader = require 'properties-reader'
 properties = PropertiesReader('resources/responses.properties')
 util = require 'util'
-moment = require 'moment'
 
 describe 'webqa script', ->
   hubotVidyoExpectedResponse = [
