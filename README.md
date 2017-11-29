@@ -69,8 +69,8 @@ You will also need to add a Redis add-on, such as [Heroku Redis][heroku-redis]
 
 A hook needs to be added to each GitHub repository about whose activity you wish fxtestbot to report.
 To do this, go to the repository settings page in GitHub, choose *Webhooks & services*, then choose *Add a webhook*.
-From the *Add webhook* page, specify `https://fxtestbot.herokuapp.com/hubot/gh-repo-events` as the *Payload URL*,
-and choose *Let me select individual events.* Choose the *Issues*, *Pull Request* and *Push* events.
+From the *Add webhook* page, specify `https://fxtestbot.herokuapp.com/hubot/gh-repo-events` as the *Payload URL*.
+Be sure to also set the content-type to application/json.  Next, choose *Let me select individual events.* Choose the *Issues*, *Pull Request* and *Push* events.
 Click the *Add webhook* button to save your new webhook.
 
 ## Contributing to the bot
