@@ -16,7 +16,7 @@ describe 'webqa script', ->
       ]
 
   beforeEach ->
-    @room = helper.createRoom()
+    @room = helper.createRoom({name: '#fx-test'})
 
   afterEach ->
     @room.destroy()
